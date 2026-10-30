@@ -1,0 +1,639 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #10091e;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* ESTRELLAS DEL FONDO */
+
+.estrellas span {
+    position: fixed;
+    color: #ff83c9;
+    opacity: 0.5;
+    animation: flotar-estrellas 5s infinite alternate;
+    pointer-events: none;
+}
+
+.estrellas span:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    font-size: 25px;
+}
+
+.estrellas span:nth-child(2) {
+    top: 30%;
+    left: 85%;
+    font-size: 30px;
+}
+
+.estrellas span:nth-child(3) {
+    top: 65%;
+    left: 15%;
+    font-size: 20px;
+}
+
+.estrellas span:nth-child(4) {
+    top: 80%;
+    left: 90%;
+    font-size: 25px;
+}
+
+.estrellas span:nth-child(5) {
+    top: 20%;
+    left: 65%;
+}
+
+.estrellas span:nth-child(6) {
+    top: 50%;
+    left: 5%;
+}
+
+.estrellas span:nth-child(7) {
+    top: 90%;
+    left: 40%;
+}
+
+.estrellas span:nth-child(8) {
+    top: 15%;
+    left: 45%;
+}
+
+.estrellas span:nth-child(9) {
+    top: 70%;
+    left: 75%;
+}
+
+.estrellas span:nth-child(10) {
+    top: 40%;
+    left: 95%;
+}
+
+@keyframes flotar-estrellas {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.2;
+    }
+
+    to {
+        transform: translateY(-25px) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+/* ENCABEZADO */
+
+header {
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.logo {
+    display: block;
+    color: #ff83c9;
+    letter-spacing: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.subtitulo {
+    display: block;
+    color: #bbaacb;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+main {
+    width: 90%;
+    max-width: 850px;
+    margin: auto;
+}
+
+.principal {
+    text-align: center;
+    padding: 45px 10px;
+}
+
+.etiqueta {
+    color: #ff83c9;
+    letter-spacing: 5px;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(35px, 7vw, 65px);
+    line-height: 1.2;
+}
+
+h1 span {
+    background: linear-gradient(
+        90deg,
+        #ff65b3,
+        #a78bfa,
+        #65ddff
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.descripcion {
+    color: #c4b6d5;
+    margin-top: 20px;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* CUADRO ARTISTICO */
+
+.cuadro {
+    width: 310px;
+    height: 340px;
+    margin: 45px auto 25px;
+    padding: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #ff79bd,
+        #a78bfa,
+        #57d5ff
+    );
+
+    border-radius: 8px;
+    box-shadow: 0 0 35px #e95eb955;
+
+    animation: flotar 4s ease-in-out infinite;
+}
+
+.marco {
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(circle at 50% 40%, #713a9b, transparent 45%),
+        linear-gradient(145deg, #21103d, #080c26);
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.luna {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+
+    background: linear-gradient(
+        135deg,
+        #fff0d5,
+        #ff83c9,
+        #9b7bff
+    );
+
+    border-radius: 50%;
+    box-shadow: 0 0 50px #ff83c9;
+    top: 45px;
+
+    animation: brillo 3s infinite alternate;
+}
+
+.corazon {
+    position: absolute;
+    font-size: 100px;
+    color: #ff65b3;
+    text-shadow: 0 0 20px #ff65b3;
+    top: 65px;
+    animation: latido 1.5s infinite;
+    z-index: 2;
+}
+
+.estrella {
+    position: absolute;
+    color: #fff0c9;
+    animation: aparecer 2s infinite alternate;
+}
+
+.estrella1 {
+    top: 30px;
+    left: 35px;
+    font-size: 25px;
+}
+
+.estrella2 {
+    top: 110px;
+    right: 30px;
+    font-size: 30px;
+}
+
+.estrella3 {
+    top: 180px;
+    left: 65px;
+    font-size: 20px;
+}
+
+.texto-cuadro {
+    position: absolute;
+    bottom: 25px;
+    text-align: center;
+    z-index: 3;
+}
+
+.texto-cuadro span {
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: #ffb6df;
+}
+
+.texto-cuadro h2 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin-top: 8px;
+    font-size: 19px;
+}
+
+/* TEXTO Y BOTON */
+
+.invitacion {
+    color: #d7c7e8;
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin: 25px 0;
+}
+
+/* OCULTAR CHECKBOX */
+
+#abrir {
+    display: none;
+}
+
+/* BOTON MAGICO */
+
+.boton-magico {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        90deg,
+        #e94eaa,
+        #8964ed
+    );
+
+    color: white;
+    padding: 17px 28px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 13px;
+
+    box-shadow: 0 0 20px #ff65b855;
+    transition: 0.4s;
+
+    animation: brillo-boton 2s infinite;
+}
+
+.boton-magico:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px #ff65b3;
+}
+
+.boton-magico span {
+    margin-left: 8px;
+}
+
+.boton-magico::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        #ffffff80,
+        transparent
+    );
+
+    transform: skewX(-25deg);
+    animation: luz 3s infinite;
+}
+
+@keyframes brillo-boton {
+    50% {
+        box-shadow: 0 0 35px #ff65b3;
+    }
+}
+
+@keyframes luz {
+    0% {
+        left: -100%;
+    }
+
+    60%, 100% {
+        left: 150%;
+    }
+}
+
+/* MENSAJE ESPECIAL */
+
+.mensaje-especial {
+    display: none;
+
+    position: relative;
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        #28143d,
+        #130c2c
+    );
+
+    border: 1px solid #ff83c9;
+    border-radius: 25px;
+
+    box-shadow: 0 0 40px #e94eaa55;
+}
+
+/* ACTIVAR MENSAJE */
+
+#abrir:checked ~ .mensaje-especial {
+    display: block;
+    animation: aparecer-mensaje 1.5s ease forwards;
+}
+
+@keyframes aparecer-mensaje {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.mensaje-especial h2 {
+    color: #ff9ed5;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin: 25px 0;
+}
+
+.mensaje-especial p {
+    color: #e2d5ef;
+    line-height: 1.9;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.pequeno {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #ff83c9;
+}
+
+.dedicatoria {
+    margin: 35px 0;
+    padding: 20px;
+
+    color: #ffb6df;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.7;
+
+    border-top: 1px solid #ff83c944;
+    border-bottom: 1px solid #ff83c944;
+}
+
+.corazon-final {
+    display: block;
+    font-size: 55px;
+    color: #ff65b3;
+    margin-top: 25px;
+    animation: latir 1s infinite;
+}
+
+.mensaje-especial h3 {
+    color: #ffc2e5;
+    font-family: Georgia, serif;
+    font-style: italic;
+    line-height: 1.7;
+    margin-top: 30px;
+}
+
+.firma {
+    color: #ff83c9 !important;
+    font-style: italic;
+    font-size: 13px !important;
+}
+
+/* LLUVIA DE CORAZONES */
+
+.efecto-corazones {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+    z-index: 20;
+    overflow: hidden;
+}
+
+#abrir:checked ~ .efecto-corazones {
+    display: block;
+}
+
+.efecto-corazones span {
+    position: absolute;
+    bottom: -50px;
+    font-size: 30px;
+
+    animation: subir 5s linear infinite;
+}
+
+.efecto-corazones span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.efecto-corazones span:nth-child(2) {
+    left: 25%;
+    animation-delay: 1s;
+}
+
+.efecto-corazones span:nth-child(3) {
+    left: 40%;
+    animation-delay: 2s;
+}
+
+.efecto-corazones span:nth-child(4) {
+    left: 55%;
+    animation-delay: 0.5s;
+}
+
+.efecto-corazones span:nth-child(5) {
+    left: 70%;
+    animation-delay: 1.5s;
+}
+
+.efecto-corazones span:nth-child(6) {
+    left: 85%;
+    animation-delay: 2.5s;
+}
+
+.efecto-corazones span:nth-child(7) {
+    left: 95%;
+    animation-delay: 3s;
+}
+
+.efecto-corazones span:nth-child(8) {
+    left: 50%;
+    animation-delay: 3.5s;
+}
+
+.efecto-corazones span:nth-child(9) {
+    left: 35%;
+    animation-delay: 2.2s;
+}
+
+.efecto-corazones span:nth-child(10) {
+    left: 75%;
+    animation-delay: 4s;
+}
+
+@keyframes subir {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0.5);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* DESTELLOS */
+
+.destello {
+    font-size: 45px;
+    color: #ffb6df;
+    animation: girar 4s linear infinite;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ANIMACIONES GENERALES */
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes latido {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes brillo {
+    from {
+        box-shadow: 0 0 20px #ff83c9;
+    }
+
+    to {
+        box-shadow: 0 0 65px #ff83c9;
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0.3;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+/* PIE DE PAGINA */
+
+footer {
+    text-align: center;
+    padding: 40px 10px;
+    color: #9c8eac;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+footer div {
+    color: #ff83c9;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+/* ADAPTACION PARA CELULARES */
+
+@media (max-width: 500px) {
+
+    .cuadro {
+        width: 270px;
+        height: 310px;
+    }
+
+    .mensaje-especial {
+        padding: 30px 20px;
+    }
+
+    .mensaje-especial h2 {
+        font-size: 27px;
+    }
+
+    .boton-magico {
+        font-size: 12px;
+        padding: 15px 20px;
+    }
+
+}
